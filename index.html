@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>API Token Auth</title>
+      <title>Tic Tac Toe</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -58,12 +58,12 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Log off</a></li>
-            <li><a href="#">Change Password</a></li>
+            <li><a href="#" class="sign-up">Register</a></li>
+            <li><a href="#" class="sign-in">Login</a></li>
+            <li><a href="#" class="sign-out">Log off</a></li>
+            <li><a href="#" class="">Change Password</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">User Stats</a></li>
+            <li><a href="#" class="change-password">User Stats</a></li>
           </ul>
         </li>
       </ul>
@@ -72,29 +72,28 @@
 </nav>
 <!--navbar ends-->
 <!--Game board begins-->
-      <h1>Tic Tac Toe</h1>
+<h1>Tic Tac Toe</h1>
 <table>
   <tr>
-    <td></td>
-    <td class="vert"></td>
-    <td></td>
+    <td id="topleft">1</td>
+    <td id="topcenter" class="vert">2</td>
+    <td id="topright">3</td>
   </tr>
   <tr>
-    <td class="hori"></td>
-    <td class="vert hori"></td>
-    <td class="hori"></td>
+    <td id="leftcenter" class="hori">4</td>
+    <td id="middle"class="vert hori">5</td>
+    <td id="rightcenter" class="hori">6</td>
   </tr>
   <tr>
-    <td></td>
-    <td class="vert"></td>
-    <td></td>
+    <td id="bottomleft">7</td>
+    <td id="bottomcenter" class="vert">8</td>
+    <td id="bottomright">9</td>
   </tr>
 </table>
 <!--game board ends-->
-
+<button type="button" id="playgame" class="btn btn-primary">Let's Play</button>
 <!--token auth forms begin-->
-      <h1>API Token Auth</h1>
-      <form id="sign-up">
+      <!--<form id="sign-up">
         <fieldset>
           <legend>Sign up!</legend>
           <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Email">
@@ -131,6 +130,6 @@
 
 
       <p>Accessing an authenticated API.</p>
-      <!--token auth forms end-->
+      <!-token auth forms end-->
     </body>
 </html>

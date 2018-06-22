@@ -7,5 +7,36 @@
 // require('./example')
 
 $(() => {
-  // your JS code goes here
-})
+
+});
+
+const board = ['topleft', 'topcenter', 'topright', 'leftcenter', 'middle', 'rightcenter', 'bottomleft', 'bottomcenter', 'bottomright'];
+
+$("#topleft").click(function(){
+  console.log('Clicked topleft!!');
+  
+});
+$("#topcenter").click(function(){
+  console.log('Clicked topcenter!!');
+});
+$("#topright").click(function(){
+  console.log('Clicked topright!!');
+});
+$("#leftcenter").click(function(){
+  console.log('Clicked leftcenter!!');
+});
+$("#middle").click(function(){
+  console.log('Clicked middle!!');
+});
+$("#rightcenter").click(function(){
+  console.log('Clicked rightcenter!!');
+});
+$("#bottomleft").click(function(){
+  console.log('Clicked bottomleft!!');
+});
+$("#bottomcenter").click(function(){
+  console.log('Clicked bottomcenter!!');
+});
+$("#bottomright").click(function(){
+  console.log('Clicked bottomright!!');
+});
