@@ -11,16 +11,18 @@ $(() => {
 });
 
 const board = ['topleft', 'topcenter', 'topright', 'leftcenter', 'middle', 'rightcenter', 'bottomleft', 'bottomcenter', 'bottomright'];
-
+//let player1 = Player('Player 1', '<i class="fas fa-times"></i>');
+//let player2 = Player('Player 2', '<i class="far fa-circle"></i>');
 
 //console log shows me each square is targeted correctly
-  var theParent = document.querySelector(".board");
-  theParent.addEventListener("click", doSomething, false);
+  let theParent = document.querySelector(".board");
+  theParent.addEventListener("click", markSquare, false);
 
-  function doSomething(e) {
-      if (e.target !== e.currentTarget) {
-          var clickedItem = e.target.id;
-          console.log("Hello " + clickedItem);
-      }
-      e.stopPropagation();
-  }
+  function markSquare(square) {
+      if (square.target !== square.currentTarget) {
+          let clickedSquare = square.target.id;
+          console.log("Hello " + clickedSquare);
+        }
+      };
+
+//mark square with an x if player 1 or an o if player 2
