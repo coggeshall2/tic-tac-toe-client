@@ -12,31 +12,15 @@ $(() => {
 
 const board = ['topleft', 'topcenter', 'topright', 'leftcenter', 'middle', 'rightcenter', 'bottomleft', 'bottomcenter', 'bottomright'];
 
-$("#topleft").click(function(){
-  console.log('Clicked topleft!!');
-  
-});
-$("#topcenter").click(function(){
-  console.log('Clicked topcenter!!');
-});
-$("#topright").click(function(){
-  console.log('Clicked topright!!');
-});
-$("#leftcenter").click(function(){
-  console.log('Clicked leftcenter!!');
-});
-$("#middle").click(function(){
-  console.log('Clicked middle!!');
-});
-$("#rightcenter").click(function(){
-  console.log('Clicked rightcenter!!');
-});
-$("#bottomleft").click(function(){
-  console.log('Clicked bottomleft!!');
-});
-$("#bottomcenter").click(function(){
-  console.log('Clicked bottomcenter!!');
-});
-$("#bottomright").click(function(){
-  console.log('Clicked bottomright!!');
-});
+
+//console log shows me each square is targeted correctly
+  var theParent = document.querySelector(".board");
+  theParent.addEventListener("click", doSomething, false);
+
+  function doSomething(e) {
+      if (e.target !== e.currentTarget) {
+          var clickedItem = e.target.id;
+          console.log("Hello " + clickedItem);
+      }
+      e.stopPropagation();
+  }
