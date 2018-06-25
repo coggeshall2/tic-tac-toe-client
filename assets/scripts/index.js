@@ -6,27 +6,14 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+
+const authEvents = require('./events.js')
+
+// On document ready
 $(() => {
+ authEvents.addHandlers()
+})
 
-});
-
-
-// const board = ['topleft', 'topcenter', 'topright', 'leftcenter', 'middle', 'rightcenter', 'bottomleft', 'bottomcenter', 'bottomright'];
-// //let player1 = Player('Player 1', '<i class="fas fa-times"></i>');
-// //let player2 = Player('Player 2', '<i class="far fa-circle"></i>');
-//
-//   let theParent = document.querySelector(".board");
-//   theParent.addEventListener("click", markSquare, false);
-//    //console log shows me each square is targeted correctly
-//
-//
-//     function markSquare(square) {
-//       if (square.target !== square.currentTarget) {
-//           let clickedSquare = square.target.id;
-//           console.log("Hello " + clickedSquare);
-//                   console.log("x");
-//         }
-//      };
 
 //mark square with an x if player 1 or an o if player 2
 // set moves to 1 and turn to true
@@ -42,12 +29,13 @@ var move = 1;
   // add 1 to move total when total reaches 9 game will be a tie
      move++;
      if(move == 10) {alert("Its adraw")}
-     if (ForWinner()!=-1 && ForWinner()!="") {
-         if (ForWinner()=="X") { alert("Player 1 wins!"); }
-         else { alert("Player 2 wins!"); }
-         turn = false;
-       };
-     });
+        if (ForWinner()!=-1 && ForWinner()!="") {
+            if (ForWinner()=="X") { alert("Player 1 wins!"); }
+            else { alert("Player 2 wins!"); }
+            turn = false;
+          };
+        });
+
   // check for winner
    function ForWinner() {
    let field1 = $("#board tr:nth-child(1) td:nth-child(1)").text();
@@ -68,5 +56,4 @@ var move = 1;
    else if ((field1==field5)&&(field5==field9)) { return field9; }
    else if ((field3==field5)&&(field5==field7)) { return field7; }
    return -1;
- }
-// check for tie
+ };
