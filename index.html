@@ -14,9 +14,10 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container">
-
+      <div class="form-success"></div>
+      <div class="form-fail"></div>
       <!--token auth forms begin-->
-            <form id="sign-up">
+          <!--  <form id="sign-up">
               <fieldset>
                 <legend>Please register!</legend>
                 <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Email">
@@ -53,7 +54,7 @@
 
 
 
-            <!--token auth forms end-->
+            <!-token auth forms end-->
 
 <!--navbar begins-->
 <nav class="navbar navbar-default navbar-static-top">
@@ -76,8 +77,9 @@
         </li>
       </ul>
           <ul class="nav navbar-nav navbar-right">
+
         <!-- <li><a href="#">Link</a></li>-->
-       <li class="dropdown">
+      <!-- <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#" class="sign-up">Register</a></li>
@@ -89,10 +91,58 @@
           </ul>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse ->
+    </div><!-/.navbar-collapse ->
   </div><!-/.container-fluid -->
 </nav>
 <!--navbar ends-->
+<!--modal begins-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Register/LogIn</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <p id='message'></p>
+      <form id="sign-up">
+        <fieldset>
+          <legend>Please register!</legend>
+          <input type="text" name="credentials[email]" class="sign-up-email" placeholder="Email">
+          <input type="password" name="credentials[password]" class="sign-up-password" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" class="sign-up-password-confirmation" placeholder="Password-confirmation">
+          <input type="submit" name="submit" value="Sign up!">
+        </fieldset>
+      </form>
+
+      <form id="sign-in">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <input type="text" name="credentials[email]" class="sign-in-email" placeholder="Email">
+          <input type="password" name="credentials[password]" class="sign-in-password" placeholder="Password">
+          <input type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+
+      <form id="sign-out">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" name="submit" value="Sign out!">
+        </fieldset>
+      </form>
+
+      <form id="change-password">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="password" name="passwords[old]" class="change-password-old" placeholder="Old Password">
+          <input type="password" name="passwords[new]" class="change-password-new" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password!">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!--modal ends-->
+
+<button type="button" id="playgame" class="btn btn-primary">Let's Play</button>
 <!--Game board begins-->
 <h1>Tic Tac Toe</h1>
 
@@ -116,10 +166,9 @@
 <!--game board ends-->
 <!--modal begins-->
 
-
 <!--modal ends-->
 
-<button type="button" id="playgame" class="btn btn-primary">Let's Play</button>
+
 
     </body>
 </html>

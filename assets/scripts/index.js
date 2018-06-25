@@ -56,4 +56,4 @@ var move = 1;
    else if ((field1==field5)&&(field5==field9)) { return field9; }
    else if ((field3==field5)&&(field5==field7)) { return field7; }
    return -1;
- };
+ }
