@@ -13,7 +13,12 @@ const authEvents = require('./events.js')
 $(() => {
  authEvents.addHandlers()
 })
-
+// let startGame = function(auth){
+//   if (signUpSuccess(data) == null &&
+//       signInSuccess(data) == null){
+//         turn = false}
+//         else {turn = true;}
+//       }
 
 //mark square with an x if player 1 or an o if player 2
 // set moves to 1 and turn to true
