@@ -9,13 +9,14 @@
 
 const authEvents = require('./events.js')
 
-
+const events = require('./events.js')
 
 //On document ready
 $(() => {
  authEvents.addHandlers()
- $('#sign-up').on('submit', authEvents.onSignUp)
+ $('#sign-up').on('submit', authEvents, events.onSignUp)
  $('#sign-in').on('submit', authEvents.onSignIn)
+ $('#nameModal').on('submit', events.openModal)
 });
 
 

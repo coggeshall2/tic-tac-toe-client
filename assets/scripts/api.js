@@ -1,5 +1,5 @@
 'use strict'
-
+const openModal = require('./events')
 const config = require('./config')
 const store = require('./store')
 
@@ -48,5 +48,6 @@ module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  openModal
 }

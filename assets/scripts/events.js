@@ -5,9 +5,17 @@ const getFormFields = require(`../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
+
+const openModal = function(event){
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  console.log(data.form)
+  setTimeout(function() { $('#nameModal').modal('hide'); }, 2000);
+}
 const onSubmitForm = function (event) {
   event.preventDefault()
-  
+
   const data = getFormFields(event.target)
   console.log(data)
   console.log(data.form)
@@ -16,6 +24,7 @@ const onSubmitForm = function (event) {
 const onSignUp = function (event) {
   event.preventDefault()
   console.log('sign up ran!')
+
 
   const data = getFormFields(this)
   api.signUp(data)
@@ -61,5 +70,6 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
-  onSubmitForm
+  onSubmitForm,
+  openModal
 }
