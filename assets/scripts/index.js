@@ -14,6 +14,8 @@ const authEvents = require('./events.js')
 //On document ready
 $(() => {
  authEvents.addHandlers()
+ $('#sign-up').on('submit', authEvents.onSignUp)
+ $('#sign-in').on('submit', authEvents.onSignIn)
 });
 
 
@@ -46,6 +48,7 @@ $(() => {
       // set turn to false for next player 2 turn
             turn = false;
           };
+          return;
         });
 
 
