@@ -24,7 +24,7 @@ let playerTwoName = '';
 let moveCount = 0;
 let hasWinner = 0;
 let turn = '';
-let grid = ['','','','','','','','',''];
+let grid = [0,'','','','','','','',''];
 
 
 function boardMsg(x){
