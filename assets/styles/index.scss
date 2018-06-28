@@ -1,49 +1,88 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
 
-h1 {
-  text-align: center;
+* {
+   margin: 0;
+   padding: 0;
 }
-// td {
-//   width: 100px;
-//   height: 100px;
-// }
-// table {
-//   margin: 5px auto;
-// }
-// .vert {
-//   border-left: 2px solid black;
-//   border-right: 2px solid black;
-// }
-// .hori {
-//   border-top: 2px solid black;
-//   border-bottom: 2px solid black;
-// }
-//
-// #board {
-//   text-align: center;
-//
-// }
+body {
+  background-color: cornsilk;
+  width: 400px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 20px;
 
+}
 
-* {margin: 0; padding: 0; }
-table { border-collapse: collapse; border-spacing: 0; }
+.navbar-brand {
+  font-family: 'Rock Salt', cursive;
+}
 
-#board { padding: 0px; margin: 0 auto; margin-top: 25px; }
-#board tr td { width: 80px; height: 80px; border: 1px solid #1c1c1c;
-							 font-family: Helvetica; text-align: center; font-size: 30px; }
-#board tr td:hover { background: #e4e4e4; cursor: pointer; }
-1
-2
-3
-4
-5
-6
-7
-* {margin: 0; padding: 0; }
-table { border-collapse: collapse; border-spacing: 0; }
+h2 {
+   height: 50px;
+   font-size: 55px;
+   text-align: center;
+   font-family: 'Rock Salt', cursive;
+ }
 
-#board { padding: 0px; margin: 0 auto; margin-top: 25px; }
-#board tr td { width: 80px; height: 80px; border: 1px solid #1c1c1c;
- font-family: Helvetica; text-align: center; font-size: 30px; }
-#board tr td:hover { background: #e4e4e4; cursor: pointer; }
+#game-wrap {
+  width: 450px;
+  height: 455px;
+  margin: 0 auto;
+  background: gray;
+  margin-top: 50px;
+  border-left: 2px solid gray;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.row {
+  width: 108%;
+  height: 150px;
+}
+
+.col {
+  width: 32%;
+  height: 149px;
+  border: 3px solid white;
+  float: left;
+  text-align: center;
+  font-size: 150px;
+  font-family: helvetica;
+  color: white;
+  cursor: pointer;
+}
+
+.col:nth-child(1){
+  border-left: none;
+}
+
+.col:nth-child(3){
+  border-right: none;
+}
+
+.row:nth-child(1) .col{
+  border-top: none;
+  margin-top: 3px;
+}
+
+.row:nth-child(3) .col{
+  border-bottom: none;
+  margin-bottom: 3px;
+}
+#panel {
+  width: 450px;
+  padding: 10px;
+  margin: 0 auto;
+  background: brown;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+#board {
+  font-size: 30px;
+  font-family: helvetica;
+  color: whitesmoke;
+  margin-top: 10px;
+}
