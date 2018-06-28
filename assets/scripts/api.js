@@ -3,6 +3,16 @@ const openModal = require('./events')
 const config = require('./config')
 const store = require('./store')
 
+const createGame = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/create',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -49,5 +59,6 @@ module.exports = {
   signIn,
   signOut,
   changePassword,
+  createGame,
   openModal
 }

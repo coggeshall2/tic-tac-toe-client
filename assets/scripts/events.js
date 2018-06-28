@@ -13,6 +13,7 @@ const openModal = function(event){
   console.log(data.form)
   setTimeout(function() { $('#nameModal').modal('hide'); }, 2000);
 }
+
 const onSubmitForm = function (event) {
   event.preventDefault()
 
@@ -24,7 +25,6 @@ const onSubmitForm = function (event) {
 const onSignUp = function (event) {
   event.preventDefault()
   console.log('sign up ran!')
-
 
   const data = getFormFields(this)
   api.signUp(data)
