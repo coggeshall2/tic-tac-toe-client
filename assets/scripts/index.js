@@ -24,7 +24,7 @@ let playerTwoName = '';
 let moveCount = 0;
 let hasWinner = 0;
 let turn = '';
-let grid = [0,'','','','','','','',''];
+let grid = [0,0,0,0,0,0,0,0,0];
 
 
 function boardMsg(x){
@@ -45,7 +45,7 @@ function setTurn(){
 
 let gameInit = function(){
   turn = '';
-  grid = [[0,0,0],[0,0,0],[0,0,0]];
+  grid = [0,0,0,0,0,0,0,0,0];
   boardMsg('');
   $('.col').map(function(){
     $(this).text('');
@@ -55,9 +55,9 @@ let gameInit = function(){
 }
 
 $('#playButton').click(function (){
-
+console.log('playButton function starts');
   if (hasWinner == 1){
-    init();
+    gameinit();
   }
 
   playerOneName = $('#player-one-name').val();
@@ -71,7 +71,7 @@ $('#playButton').click(function (){
 });
 
 $('.col').click(function(){
-
+console.log('.col click function');
   if (playerOneName == '' || playerTwoName == ''){
     alert('Please set player names');
     return;
@@ -79,7 +79,7 @@ $('.col').click(function(){
 
   let row = $(this).parent().index();
   let col = $(this).index();
-
+console.log('set row/col');
   if (grid[row][col] !== 0){
     alert('This square is already taken. Please try another square.');
     return;
@@ -91,8 +91,11 @@ $('.col').click(function(){
   }
 
   if (turn == playerOneName){
+    console.log('check if player 1');
     moveCount++;
-    $(this).text('o');
+    console.log('add 1 to moveCount');
+    $(this).text('x');
+    console.log('mark square');
     grid[row][col] = 1;
     let ifWon = winnerCheck(1, playerOneName);
       if (!ifWon){
@@ -113,8 +116,9 @@ $('.col').click(function(){
   }
   else if (turn == playerTwoName) {
     moveCount++;
-    $(this).text('x');
-    grid[row][col] = 2;
+    $(this).text('o');
+    console.log('mark square');
+        grid[row][col] = 2;
     let ifWon = winnerCheck(2, playerTwoName);
     if (!ifWon){
       if (moveCount >= 9){

@@ -3,6 +3,8 @@ WDI PVD-03 Project #1 - Tic Tac Toe
 Overview
 
 My first project at General Assembly was to create a Single Page Application. I was given a list of requirements to adhere to and accomplish. One of our project requirements was to create user stories:
+
+
 •	The user can register with an email address and password.
 •	The user can login with that email and password, sign-out or change passwords.
 •	The user can play against another person not a computer.
@@ -12,7 +14,10 @@ Several other requirements were:
 •	Provide version control with frequent commits
 •	Provide a README file
 •	Use jQuery and Ajax for DOM manipulation and for communication between the client and server
-Technologies Used
+
+
+
+Technologies Used:
 •	HTML5
 •	CSS3
 •	SASS
@@ -27,4 +32,3 @@ Rules of the game:
  either horizontally, vertically or diagonally
 -If all squares are marked before either opponent reaches 3 marked squares in a row
  the game results in a tie.
- 
