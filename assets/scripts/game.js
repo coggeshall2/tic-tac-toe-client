@@ -53,7 +53,7 @@ const checkWinner = function () {
         sq(2) !== '' && sq(2) === sq(5) && sq(5) === sq(8) ||
         sq(0) !== '' && sq(0) === sq(4) && sq(4) === sq(8) ||
         sq(6) !== '' && sq(6) === sq(4) && sq(4) === sq(2)) {
-    message(`Congratulations, ${currentPlayer}! You win!`)
+    message(`Congratulations, Player ${currentPlayer}! You win!`)
     gameValues.isOver = true
     if (currentPlayer === playerOne) {
       winner = currentPlayer
@@ -61,7 +61,7 @@ const checkWinner = function () {
       winner = currentPlayer
     }
   } else if (sq(0) !== '' && sq(1) !== '' && sq(2) !== '' && sq(3) !== '' && sq(4) !== '' && sq(5) !== '' && sq(6) !== '' && sq(7) !== '' && sq(8) !== '') {
-    message(`You tied!`)
+    message(`It's a draw...Play again!`)
     gameValues.isOver = true
     }
 }
@@ -73,7 +73,7 @@ const message = function (msg) {
 }
 
 const displayCurrentPlayer = function (currentPlayer) {
-  document.getElementById('message').innerText = `${currentPlayer}, it's your turn!`
+  document.getElementById('message').innerText = `Player ${currentPlayer}, it's your turn!`
 }
 
 // add win to score

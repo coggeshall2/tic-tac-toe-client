@@ -1,9 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-// **********************
-// SETTINGS FOR BODY
-// **********************
 body {
     text-align: center;
     font: Georgia;
@@ -19,25 +16,19 @@ main {
     min-height: 600px;
 }
 
-// **********************
-// SETTINGS FOR HEADING
-// **********************f
 h1 {
     padding-bottom: 100px;
     font-size: 72px;
     color: #bbb;
 }
 
-// **********************
-// SETTINGS FOR sign in / sign up
-// **********************
+
 .signInUp {
-  //  background-image: url('../../images/bg2.jpg');
     height: 75%;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #aaa;
+    color: green;
 }
 input {
     margin: 2px;
@@ -49,9 +40,6 @@ input {
     padding: 20px;
 }
 
-// **********************
-// SETTINGS FOR GAMEBOARD
-// **********************
 #gameboard {
     display: none;
 }
@@ -78,18 +66,12 @@ td {
     border-right: 4px solid #bbb;
 }
 
-// **********************
-// SETTINGS FOR SCORE
-// **********************
 #score {
     padding-top: 10px;
     padding-bottom: 30px;
     font-size: 24px;
 }
 
-// **********************
-// SETTINGS FOR USER INFO DISPLAY
-// **********************
 #message {
     padding-top: 70px;
     padding-bottom: 40px;
@@ -111,9 +93,6 @@ td {
 }
 
 
-// **********************
-// SETTINGS FOR RESET BUTTONS
-// **********************
 .button {
     margin: 0 5px;
     background-color: #444;
@@ -130,18 +109,6 @@ td {
     padding-bottom: 20px;
 }
 
-// **********************
-// SETTINGS FOR LINK TO PHOTOGRAPHERS
-// **********************
-.credit {
-    position:absolute;
-    bottom:0;
-    right:0;
-}
-
-// **********************
-// SETTINGS FOR OLD GAMES
-// **********************
 #view-games {
     margin: 5px;
     display: none;
@@ -152,29 +119,21 @@ td {
     margin: 5px;
 }
 
-// **********************
-// SETTINGS FOR CHANGE PASSWORD
-// **********************
 #change-password {
     margin: 5px;
     color: #aaa;
 }
 #changedPassword {
     margin-top: 10px;
-    //background-image: url('../../images/bg2.jpg');
-    height: 15%;
+      height: 15%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 24px;
 }
 
-// **********************
-// SETTINGS FOR USER SIGN UP / IN / OUT
-// **********************
 #userMessage {
-    //background-image: url('../../images/bg2.jpg');
-    height: 15%;
+      height: 15%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
