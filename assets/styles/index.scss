@@ -1,5 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+// font-family: 'Monoton', cursive;
 
 body {
     text-align: center;
@@ -35,9 +37,11 @@ input {
 }
 #sign-up {
     padding: 20px;
+
 }
 #sign-in {
     padding: 20px;
+
 }
 
 #gameboard {

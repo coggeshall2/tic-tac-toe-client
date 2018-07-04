@@ -4,24 +4,28 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#userMessage').text('Signed up successfully')
-  $('#userMessage').css('display', 'block', 'background-color', 'green')
+    $('#userMessage').css('background-color', 'green')
+  $('#userMessage').css('display', 'block')
 }
 
 const signInSuccess = function (data) {
   $('#userMessage').text('Signed in successfully')
-  $('.userButtons').css('display', 'block', 'background-color', 'green')
+  $('#userMessage').css('background-color', 'green')
+  $('.userButtons').css('display', 'block')
   $('.signInUp').css('display', 'none')
   store.user = data.user
 }
 
 const changePasswordSuccess = function (data) {
   $('#changedPassword').text('Password changed successfully')
-  $('#change-password').css('display', 'none', 'background-color', 'green')
+  $('#changedPassword').css('background-color', 'green')
+  $('#change-password').css('display', 'none')
 }
 
 const signOutSuccess = function () {
   $('#userMessage').text('Signed out successfully')
-  $('.signInUp').css('display', 'block', 'background-color', 'green')
+  $('#userMessage').css('background-color', 'green')
+  $('.signInUp').css('display', 'block')
   $('#gameboard').css('display', 'none')
   $('.userButtons').css('display', 'none')
   $('.userInfo').css('display', 'none')
@@ -32,6 +36,7 @@ const createSuccess = function (data) {
   $('#gameboard').css('display', 'block')
   store.game = data.game
   store.game.id = data.game.id
+  console.log(data.game)
 }
 
 const movesSuccess = function () {

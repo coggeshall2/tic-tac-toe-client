@@ -85,7 +85,7 @@ const score = function (winner) {
     playerO++
     playScore = true
   }
-  document.getElementById('playScore').innerText = `${playerOne}: ${playerX} and ${playerTwo}: ${playerO}`
+  document.getElementById('score').innerText = `${playerOne}: ${playerX} and ${playerTwo}: ${playerO}`
 }
 
 // start game
