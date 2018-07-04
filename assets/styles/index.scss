@@ -1,0 +1,145 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+// font-family: 'Monoton', cursive;
+
+body {
+    text-align: center;
+    font: Georgia;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #222;
+    color: #eee;
+    text-shadow: 2px 2px 4px #111;
+}
+a {
+    color: #bbb;
+}
+main {
+    min-height: 600px;
+}
+
+h1 {
+    padding-bottom: 100px;
+    font-size: 72px;
+    color: #bbb;
+}
+
+
+.signInUp {
+    height: 75%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: green;
+}
+input {
+    margin: 2px;
+}
+#sign-up {
+    padding: 20px;
+
+}
+#sign-in {
+    padding: 20px;
+
+}
+
+#gameboard {
+    display: none;
+}
+table {
+    margin: auto;
+    font-size: 70px;
+}
+tr {
+    height: 120px;
+}
+td {
+    width: 120px;
+}
+.row1 {
+    border-bottom: 4px solid #bbb;
+}
+.row2 {
+    border-bottom: 4px solid #bbb;
+}
+.col1 {
+    border-right: 4px solid #bbb;
+}
+.col2 {
+    border-right: 4px solid #bbb;
+}
+
+#score {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 24px;
+}
+
+#message {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    font-size: 24px;
+}
+.userInfo {
+    display: none;
+    padding: 15px;
+    background-color: #111;
+}
+#sign-out {
+    display: inline;
+}
+#change-password {
+    display: none;
+}
+.userButtons {
+   display: none;
+}
+
+
+.button {
+    margin: 0 5px;
+    background-color: #444;
+    border: none;
+    color: #bbb;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.buttons {
+    margin: 20px 5px 5px 5px;
+    padding-bottom: 20px;
+}
+
+#view-games {
+    margin: 5px;
+    display: none;
+}
+#view-games > p {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+}
+
+#change-password {
+    margin: 5px;
+    color: #aaa;
+}
+#changedPassword {
+    margin-top: 10px;
+      height: 15%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 24px;
+}
+
+#userMessage {
+      height: 15%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 24px;
+}
