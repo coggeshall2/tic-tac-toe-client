@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="./public/favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+       <!-- HEADER -->
+       <header >
+         <div>
+             <h1>Tic Tac Toe</h1>
+             <h4>First time players, please sign up and then sign in</h4>
+             <div class="sign-inup-buttons">
+             <button type="button" class="button"><a href="#sign-up">Sign up</a></button>
+             <button type="button" class="button"><a href="#signIn">Sign in</a></button>
+             </div>
+           </div>
+       </header>
+       <!-- End Header -->
+       <!-- Hidden Divs -->
+       <div class='signInUp'>
+         <div id="signUp">
+           <form id="sign-up">
+             <fieldset>
+               <h2>Sign Up!</h2>
+               <input type="email" name="credentials[email]" placeholder="Email"><br>
+               <input type="password" name="credentials[password]" placeholder="Password"><br>
+               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
+               <input type="submit" value="Sign Up!">
+             </fieldset>
+           </form>
+         </div>
+
+         <div id="signIn">
+           <form id="sign-in">
+               <fieldset>
+                 <h2>Sign In!</h2>
+                 <input type="text" name="credentials[email]" placeholder="Email"><br>
+                 <input type="password" name="credentials[password]" placeholder="Password"><br>
+                 <input type="submit" value="Sign In!">
+               </fieldset>
+             </form>
+           </div>
+         </div>
+       <!-- End Hidden Divs -->
+
+       <!-- Game board! -->
+       <div id='userMessage'></div>
+       <main id='main'>
+         <div  id='gameboard'>
+           <div id='message'>messages will go here</div>
+
+           <table id='theBoard'>
+             <tr class='row1' id='r1'>
+               <td class='col1' id=0></td>
+               <td class='col2' id=1></td>
+               <td class='col3' id=2></td>
+             </tr>
+             <tr class='row2' id='r2'>
+               <td class='col1' id=3></td>
+               <td class='col2' id=4></td>
+               <td class='col3' id=5></td>
+             </tr>
+             <tr class='row3' id='r3'>
+               <td class='col1' id=6></td>
+               <td class='col2' id=7></td>
+               <td class='col3' id=8></td>
+             </tr>
+           </table>
+         </div>
+
+         <div class='userButtons'>
+             <div id='score'></div>
+             <div class='buttons'>
+               <button class = 'button' id='newGame'>New Game</button>
+               <button class = 'button' id='resetScore'>Reset the score</button>
+               <button class = 'button' id='seeInfo'>See User Info</button>
+             </div>
+         </div>
+       </main>
+       <!-- End Game board -->
+
+       <!-- User info -->
+       <div class='userInfo'>
+         <button class = 'button' id='changePassword'>Change Password</button>
+         <button class = 'button' id='getGames'>Old Games</button>
+         <form id="sign-out">
+           <input type="submit" class='button' id="signOut" value="Sign Out!">
+         </form>
+         <div>
+           <form id="change-password" class="border">
+             <fieldset>
+               <h3>Change Password</h3>
+               <input type="password" name="passwords[old]" placeholder="Old Password"><br>
+               <input type="password" name="passwords[new]" placeholder="New Password"><br><br>
+               <input type="submit" value="Change Password">
+             </fieldset>
+           </form>
+           <div id="changedPassword"></div>
+         </div>
+         <div id='view-games'>
+           <h3>Previous Games</h3>
+         </div>
+       </div>
+       <!-- End User info -->
+
+     </body>
+ </html>
